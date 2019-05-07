@@ -1,19 +1,28 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
 #include<stdlib.h>
-void print(int n)
+#include<string.h>
+void Palindrome(char *a)
 {
-	if (n > 9)
+	char *begin = a;
+	char *end = a + strlen(a) - 1;
+	while (*begin == *end&&begin < end)
 	{
-		print(n / 10);
+		begin++;
+		end--;
 	}
-	printf("%d", n % 10);
+	if (begin >= end)
+	{
+		puts("ÊÇ");
+	}
+	else
+		puts("NO");
 }
 int main()
 {
-	int a = 0;
-	scanf("%d", &a);
-	print(a);
+	char a[100];
+	gets(a);
+	Palindrome(a);
 	system("pause");
 	return 0;
 }
