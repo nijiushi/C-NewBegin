@@ -13,7 +13,7 @@ void Palindrome(char *a)
 	}
 	if (begin >= end)
 	{
-		puts("ÊÇ");
+		puts("ÃŠÃ‡");
 	}
 	else
 		puts("NO");
